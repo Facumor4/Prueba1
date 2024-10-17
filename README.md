@@ -18,16 +18,20 @@ else:
     print("Eres mayor")
 
 # Bucles
-
+letras = [1,2,30,3]
+# for para recorrer en bucle una vez los datos de la lista.
 for i in range(10):
     print(i)
+
+for e in letras:
+    print(e)
 
 intentos = 0
 while intentos < 3:
     intentos += 1
     print (f"Primer intento {intentos}") # f = f-String
 
-# Usamos el break
+# Usamos el break | para ejecutar la misma tarea varias veces
 
 intentos = 0
 while intentos < 3:
@@ -39,13 +43,13 @@ while intentos < 3:
         print (f"Segundo intento {intentos}")
 
 
-# Listas
+# Listas | Las listas son un conjunto de variables que se pueden modificar.
 lista = [1,2,3]
 
-# Tuplas
+# Tuplas | Las tuplas son un conjunto de variables que NO se pueden modificar
 Tuplas = (4,5,6)
 
-# Diccionario
+# Diccionario | Los diccionarios son como las listas, pero con una mayor facilidad para referirnos a un elemento del diccionario.
 auto = {
     "Marca": "Fiat",
     "Año": 2012,
@@ -56,10 +60,17 @@ auto = {
 
 lista.append(8)
 
+lista[1] = 4
+#lista.remove(1)
+#lista.clear()
+
+
 # Funciones
 
-def saludar():
-    print("Hola amigo")
+def saludar(nombre):
+    print(f"Hola amigo {nombre}")
+    
+saludar("Facu")
 
 # Programacion orientada a objeto
 class estudiante:
