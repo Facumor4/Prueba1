@@ -1,18 +1,21 @@
 # Sistema de autenticación
-
-def autenticar():
-    intentos = 0
-    contraseña = "facu123"
-    while intentos < 3:
-        usuario = input("Ingrese la contraseña: ").lower()
-        intentos += 1
-        if usuario == contraseña:
-            print("Acceso concedido")
-            break
-        elif usuario == "salir":
-            break
-        else:
-            print("Acceso denegado")
+class sistema_autenticacion:
+    def __init__(self, contraseña):
+        self.contraseña = contraseña
+        self.intentos = 0
+        
+    def autenticar(self):
+        while self.intentos < 3:
+            usuario = input("Ingrese la contraseña: ").lower()
+            self.intentos += 1
+            if usuario == self.contraseña:
+                print("Acceso concedido")
+                break
+            elif usuario == "salir":
+                break
+            else:
+                print("Acceso denegado")
             
             
-autenticar()
+usuario1 = sistema_autenticacion("facu123")
+usuario1.autenticar()
